@@ -1,0 +1,47 @@
+{
+  "name": "eleventy-plugin-robotstxt",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "author": {
+    "name": "Aleksandr Hovhannisyan",
+    "url": "https://www.aleksandrhovhannisyan.com"
+  },
+  "license": "MIT",
+  "description": "An Eleventy plugin to generate a robots.txt file for your static site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robots.git"
+  },
+  "homepage": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robots.git",
+  "keywords": [
+    "eleventy-plugin",
+    "eleventy",
+    "11ty",
+    "robots.txt"
+  ],
+  "files": [
+    "src/index.js",
+    "src/typedefs.js",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "clean": "rimraf example/_site",
+    "test": "node --test",
+    "serve": "pnpm run clean && cd example && npx @11ty/eleventy --serve --incremental"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.6",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.0.0",
+    "rimraf": "^5.0.5"
+  },
+  "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"
+}

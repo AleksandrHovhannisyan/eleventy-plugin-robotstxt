@@ -279,6 +279,3 @@ Disallow: /
 
 - This plugin registers Liquid as a recognized template language, as suggested by Zach Leatherman here: https://github.com/11ty/eleventy/issues/1612#issuecomment-2027476340
 
-```
-
-```

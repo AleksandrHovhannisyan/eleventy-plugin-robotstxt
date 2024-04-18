@@ -1,5 +1,8 @@
 const { warn, getRobotsTxt } = require('./utils')
 
+// In-memory cache of fetched AI robots.txt user agents, to avoid fetching it multiple times
+let cachedAIDisallowRules
+
 /**
  * @param {unknown} eleventyConfig
  * @param {import("./typedefs").EleventyPluginRobotsTxtOptions} options
@@ -21,10 +24,14 @@ module.exports = async (eleventyConfig, options) => {
   let robotsTxt = getRobotsTxt({ rules, sitemapURL })
   // Optional: soft-block AI robots
   if (shouldBlockAIRobots) {
-    // TODO: use eleventy cache plugin?
-    let disallowedAIRobots = await fetch('https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt')
-    disallowedAIRobots = await disallowedAIRobots.text()
-    robotsTxt += '\n\n' + disallowedAIRobots
+    robotsTxt += '\n\n'
+    if (cachedAIDisallowRules) {
+      robotsTxt += cachedAIDisallowRules
+    } else {
+      let disallowedAIRobots = await fetch('https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt')
+      disallowedAIRobots = await disallowedAIRobots.text()
+      robotsTxt += disallowedAIRobots
+    }
   }
 
   // Needed per https://github.com/11ty/eleventy/issues/1612#issuecomment-2027476340

@@ -72,7 +72,6 @@ const eleventyPluginRobotsTxtOptions = {
     [
       "*",
       [
-        { disallow: "/" },
         { disallow: "/calendar/" },
         { disallow: "/junk/" },
         { disallow: "/books/fiction/contemporary/" },

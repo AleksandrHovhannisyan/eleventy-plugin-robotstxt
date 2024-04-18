@@ -10,9 +10,9 @@
   "description": "An Eleventy plugin to generate a robots.txt file for your static site",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robots.git"
+    "url": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt.git"
   },
-  "homepage": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robots.git",
+  "homepage": "https://github.com/AleksandrHovhannisyan/eleventy-plugin-robotstxt.git",
   "keywords": [
     "eleventy-plugin",
     "eleventy",

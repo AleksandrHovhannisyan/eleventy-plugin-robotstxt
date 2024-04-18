@@ -21,6 +21,7 @@
   ],
   "files": [
     "src/index.js",
+    "src/utils.js",
     "src/typedefs.js",
     "README.md",
     "LICENSE",

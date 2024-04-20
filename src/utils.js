@@ -21,9 +21,9 @@ const getRobotsTxt = (options) => {
     if (!isAbsoluteUrl(sitemapURL)) {
       throw error('sitemapURL is not an absolute URL.')
     }
-    robotsTxt += `Sitemap: ${sitemapURL}\n`
+    robotsTxt += `Sitemap: ${sitemapURL}`
     if (rules?.size) {
-      robotsTxt += '\n'
+      robotsTxt += '\n\n'
     }
   }
   if (rules) {

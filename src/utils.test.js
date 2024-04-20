@@ -11,8 +11,10 @@ describe('getRobotsTxt', () => {
     assert.throws(() => getRobotsTxt({ sitemapURL: 'example.com/sitemap.xml' }))
   })
   it('allows valid sitemapURL', () => {
-    assert.throws(() => getRobotsTxt({ sitemapURL: 'http://example.com/sitemap.xml' }))
-    assert.throws(() => getRobotsTxt({ sitemapURL: 'https://example.com/sitemap.xml' }))
+    assert.doesNotThrow(() => getRobotsTxt({ sitemapURL: 'http://example.com/sitemap.xml' }))
+    assert.strictEqual(getRobotsTxt({ sitemapURL: 'http://example.com/sitemap.xml' }), 'Sitemap: http://example.com/sitemap.xml')
+    assert.doesNotThrow(() => getRobotsTxt({ sitemapURL: 'https://example.com/sitemap.xml' }))
+    assert.strictEqual(getRobotsTxt({ sitemapURL: 'https://example.com/sitemap.xml' }), 'Sitemap: https://example.com/sitemap.xml')
   })
   it('throws if a path rule has no paths', () => {
     assert.throws(() => getRobotsTxt({ rules: new Map([['*', []]]) }))

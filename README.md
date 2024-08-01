@@ -1,7 +1,7 @@
 # eleventy-plugin-robotstxt
 
 > [!NOTE]
-> This plugin is experimental and is only compatible with Eleventy versions `>= 3.0.0-alpha.6`.
+> This plugin is only compatible with Eleventy versions `>= 3.0.0-alpha.6`.
 
 Automatically generate a [robots.txt file](https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt) for your Eleventy site using front matter.
 

@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-robotstxt",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "main": "src/index.js",
   "author": {
     "name": "Aleksandr Hovhannisyan",
@@ -33,7 +33,7 @@
     "serve": "pnpm run clean && cd example && npx @11ty/eleventy --serve --incremental"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.6",
+    "@11ty/eleventy": "3.0.0-beta.1",
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^9.0.0",
     "eslint": "^8.57.0",
